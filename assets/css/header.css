@@ -1,0 +1,120 @@
+.header-container {
+    background-color: whitesmoke;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: header-container 1s alternate;
+}
+
+.header-container .logo {
+    height: 70px;
+    width: 200px;
+}
+
+.header-container .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.fa-bell {
+    color: darkgrey;
+    transition: color 1s ease;
+    cursor: pointer;
+}
+
+.fa-bell:hover {
+    color: black;
+}
+
+.header-container .profile .letter-circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 8px;
+    background: coral;
+    border: none;
+    color: snow;
+    text-align: center;
+    font: 25px Arial, sans-serif;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown input {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.menu {
+    height: 0px;
+    width: 250px;
+    position: absolute;
+    left: -230px;
+    opacity: 0;
+    background-color: #ffffff;
+    transition: height 0.20s ease-out;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
+}
+
+.dropdown input:checked ~ .menu {
+    opacity: 1;
+    height: 140px
+}
+
+.menu-elements {
+    color: darkslategray;
+    font-size: large;
+    text-align: left;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.username {
+    color: grey;
+    text-decoration: underline;
+    text-decoration-color: grey;
+    text-align: center;
+    font-weight: bold;
+}
+
+.email {
+    font-size: small;
+    padding: 2px;
+}
+
+.menu-profile, .settings, .logout {
+    color: black;
+    padding: 5px;
+    transition: background-color 1s linear;
+    cursor: pointer;
+}
+
+.menu-profile:hover {
+     background-color: gainsboro;
+}
+
+.settings:hover {
+    background-color: gainsboro;
+}
+
+.logout:hover {
+    background-color: gainsboro;
+}
+
+@keyframes header-container {
+    0% { transform: translateY(-70px) }
+    100% { transform: translateY(0) }
+}
